@@ -11,7 +11,9 @@ public class RomanNumerals{
       switch(input.next()){
         case "romanToNum":
           System.out.println("Please enter a roman numeral (NOTE: must be all caps)\n");
-          System.out.println(romanToNum(input.next()));
+          int n = romanToNum(input.next());
+          if(n == 0) System.out.println("NOT A ROMAN NUMERAL, RETURNING TO METHOD SELECT");
+          else System.out.println(n);
           break;
 
         case "numToRoman":
@@ -69,7 +71,6 @@ public class RomanNumerals{
           break;
 
         default:
-          System.out.println("UNKNOWN SYMBOL IN NUMBER!!!");
           return 0;
       }
     }
@@ -117,5 +118,7 @@ public class RomanNumerals{
     return numToRoman(romanToNum(rom1) + romanToNum(rom2));
   }
 
-
+  public static boolean isRomanNum(){
+    return false;
+  }
 }
